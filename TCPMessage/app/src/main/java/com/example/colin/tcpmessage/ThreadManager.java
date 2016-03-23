@@ -18,50 +18,47 @@ public class ThreadManager implements Runnable {
     }
 
     @Override
-    public void run(){
-        BufferedReader reader = null;
-        StringBuilder sb = new StringBuilder();
-        String line;
+    public void run() {
 
+        String message;
 
         TCPManager client = new TCPManager();
         Socket socket = client.SetUpClient("10.0.0.4", 3490);
 
-        while(true) {
-            PrintWriter out = null;
-            try {
-                out = new PrintWriter(socket.getOutputStream(), true);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            out.println("1Hello From android");
-            ChatActivity.displayString("HELLOW");
-            try {
-                reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                socket.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            try {
-                while ((line = reader.readLine()) != null) {
-                    sb.append(line + "\n" );
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            String message = sb.toString();
-            ChatActivity.displayString(message);
-
-            if (sb.toString() == "quit") {
-                try {
-                    socket.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                break;
-            }
+        message = "1Hello From Android";
+        PrintWriter out = null;
+        try {
+            out = new PrintWriter(socket.getOutputStream(), true);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+        out.println(message);
+
+        try {
+            BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            String Response = reader.readLine();
+            ChatActivity.displayString(Response);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        // This is here to test
+        // I dont think this is getting exicuted 
+        // how do I get back to this thread after calling "ChatActivity.displayString(Response)"
+        message = "Second hello";
+        try {
+            out = new PrintWriter(socket.getOutputStream(), true);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        out.println(message);
+        /*
+        try {
+            socket.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        */
     }
 
     public void start(){

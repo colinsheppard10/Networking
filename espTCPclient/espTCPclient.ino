@@ -5,7 +5,7 @@ const char* ssid     = "HOME-1682";
 const char* password = "33F9FDA473994D43";
 
 //const char* host = "seniordesign.ddns.net";
-const char* host = "10.0.0.4";
+const char* host = "10.0.0.6";
 
 void setup() {
   Serial.begin(115200);
@@ -49,7 +49,7 @@ void loop() {
   }
   
   // This will send the request to the server
-  client.print("0ay yo fo realdoe");
+  client.print("0000000000");
   delay(500);
   
   // Read all the lines of the reply from server and print them to Serial

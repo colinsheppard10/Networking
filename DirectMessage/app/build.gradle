@@ -5,13 +5,11 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "com.example.colin.tcpmessage"
+        applicationId "com.example.colin.directmessage"
         minSdkVersion 22
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
-        // this is what I added
-        testPackageName "/Users/Colin/Desktop/Networking/TCPMessage/app/src/androidTest/java/com/example/colin/tcpmessage"
     }
     buildTypes {
         release {

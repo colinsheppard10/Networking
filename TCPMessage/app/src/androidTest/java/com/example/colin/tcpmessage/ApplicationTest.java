@@ -10,4 +10,23 @@ public class ApplicationTest extends ApplicationTestCase<Application> {
     public ApplicationTest() {
         super(Application.class);
     }
+
+    @Override
+    protected void setUp() throws Exception{
+        super.setUp();
+    }
+
+
+
+    public void testNumberAdder(){
+
+        int result = NumberAdder.addNumber(2,3);
+        assertEquals(5, result);
+
+    }
+
+    @Override
+    protected void tearDown() throws Exception{
+        super.tearDown();
+    }
 }

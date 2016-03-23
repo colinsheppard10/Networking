@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/TCPMessage.iml" filepath="$PROJECT_DIR$/TCPMessage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DirectMessage.iml" filepath="$PROJECT_DIR$/DirectMessage.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

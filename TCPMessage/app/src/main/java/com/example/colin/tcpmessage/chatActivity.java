@@ -28,11 +28,11 @@ public class chatActivity extends AppCompatActivity {
        myThread.start();
    }
 
-    public void displayString(String s){
-        toBedisplayed = s;
+    public void displayString(String response){
+        toBedisplayed = response;
         runOnUiThread(new Runnable() {
             public void run() {
-                textView.setText(toBedisplayed);
+                textView.append(toBedisplayed);
             }
         });
     }
