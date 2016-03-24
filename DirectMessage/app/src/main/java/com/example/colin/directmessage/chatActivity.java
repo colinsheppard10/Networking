@@ -29,7 +29,7 @@ public class chatActivity extends AppCompatActivity{
         int socketNumber = intent.getIntExtra("socket", -1);
         //textView.append(IP + "  " + socketNumber);
 
-       ThreadManager myThread = new ThreadManager(this,IP, socketNumber, "Hello from Android");
+       ThreadManager myThread = new ThreadManager(this,"0000", socketNumber, "Hello from Android");
        myThread.start();
     }
 

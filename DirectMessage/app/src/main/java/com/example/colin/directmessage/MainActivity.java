@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
     public EditText mySocket;
     public EditText myIP1;
     public EditText myIP2;
-    public TextView testText;
     Editable friendSocketString;
 
     @Override
@@ -34,28 +33,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void waitFunction(View view){
-        testText = (TextView) findViewById(R.id.textView);
         friendSocket = (EditText) findViewById(R.id.editText);
         int friendSocketNumber = Integer.valueOf(String.valueOf(friendSocket.getText()));
         friendSocketString = friendSocket.getText();
-        testText.setText(friendSocketString);
 
         openEditorForChat(view, "0000", friendSocketNumber);
     }
 
     public void setupFunction(View view){
 
-        testText = (TextView) findViewById(R.id.textView);
         mySocket = (EditText) findViewById(R.id.editText4);
         myIP1 = (EditText) findViewById(R.id.editText2);
         myIP2 = (EditText) findViewById(R.id.editText3);
         int mySocketNumber = Integer.valueOf(String.valueOf(mySocket.getText()));
         String myIP = myIP1.getText() + "." + myIP2.getText();
-
-
-        testText.append(mySocket.getText());
-        testText.append(myIP1.getText());
-        testText.append(myIP2.getText());
 
         openEditorForChat(view, myIP, mySocketNumber);
     }
