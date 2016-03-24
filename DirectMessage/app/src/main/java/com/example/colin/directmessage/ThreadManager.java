@@ -17,7 +17,6 @@ public class ThreadManager extends Thread {
     public String message;
     public chatActivity ChatActivity;
 
-
     ThreadManager(chatActivity passedChatActivity ,String passedIP, int passedSocket, String passedMessage){
         IP = passedIP;
         SocketNumber = passedSocket;
@@ -26,22 +25,30 @@ public class ThreadManager extends Thread {
     }
 
     public void run(){
-        if (IP == "0000") {
+        Socket socket = null;
             try{
-                Socket socket = TCPManager.setUpServer(SocketNumber);
+                if (IP == "0000") {
+                    socket = TCPManager.setUpServer(SocketNumber);
+                }else{
+                    socket = TCPManager.setUpClient(SocketNumber, IP);
+                }
                 PrintWriter out = null;
                 out = new PrintWriter(socket.getOutputStream(), true);
                 out.println(message);
+                ChatActivity.passToMain(socket,"from run");
 
-                BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                String Response = reader.readLine();
-                ChatActivity.displayString(Response);
+                String Response = null;
+                while (Response != "close") {
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                    Response = reader.readLine();
+                    ChatActivity.displayString(Response);
+                }
                 socket.close();
 
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }
+
     }
 
     public void start(){

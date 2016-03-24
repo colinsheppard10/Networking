@@ -16,5 +16,13 @@ public class TCPManager {
         return socket;
     }
 
+    public static Socket setUpClient(int userSocket, String userIP) throws IOException {
+
+        Socket socket = new Socket(userIP, userSocket);
+        return socket;
+
+
+    }
+
 
 }
