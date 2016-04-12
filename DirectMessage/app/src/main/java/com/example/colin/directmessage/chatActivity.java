@@ -53,9 +53,9 @@ public class chatActivity extends AppCompatActivity{
         passingTest = String.valueOf(myMessage.getText());
         textView.append("ME: "+ passingTest + "\n");
 
-
         PrintWriter out = null;
         out = new PrintWriter(socket.getOutputStream(), true);
         out.println("FRIEND: " + passingTest);
     }
+
 }
