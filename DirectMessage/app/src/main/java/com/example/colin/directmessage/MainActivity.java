@@ -20,15 +20,16 @@ public class MainActivity extends AppCompatActivity {
     public EditText myIP1;
     public EditText myIP2;
     Editable friendSocketString;
+    public TextView testText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
         waitButton = (Button) findViewById(R.id.button);
         setButton = (Button) findViewById(R.id.button2);
-
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        testText = (TextView) findViewById(R.id.textView);
 
     }
 
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         int friendSocketNumber = Integer.valueOf(String.valueOf(friendSocket.getText()));
         friendSocketString = friendSocket.getText();
 
-        openEditorForChat(view, "0000", friendSocketNumber);
+        openEditorForChat(view, null, friendSocketNumber);
     }
 
     public void setupFunction(View view){
@@ -56,7 +57,5 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("socket", socket);
         intent.putExtra("IP", IP);
         startActivityForResult(intent,1001);
-
-
     }
 }

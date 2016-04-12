@@ -1,11 +1,11 @@
 
 #include <ESP8266WiFi.h>
 
-const char* ssid     = "HOME-1682";
-const char* password = "33F9FDA473994D43";
+const char* ssid     = "SwagLand";
+const char* password = "helloman";
 
 //const char* host = "seniordesign.ddns.net";
-const char* host = "10.0.0.6";
+const char* host = "192.168.1.101";
 
 void setup() {
   Serial.begin(115200);
