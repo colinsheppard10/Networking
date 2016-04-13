@@ -50,11 +50,13 @@ public class ThreadManager extends Thread {
                 while (Response != "close") {
                     BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                     Response = reader.readLine();
-                    ChatActivity.displayString(Response);
 
                     if (IP == null) {
+                        String tester= "server passing: " + Response + " to submitClient\n";
+                        ChatActivity.displayString(tester);
                         ChatActivity.submitClient(Response);
                     }
+                    ChatActivity.displayString(Response);
 
                 }
                 socket.close();

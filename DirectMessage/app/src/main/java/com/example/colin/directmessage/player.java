@@ -8,4 +8,5 @@ import java.util.Vector;
 public class player implements java.io.Serializable{
     public Vector cardValue = new Vector();
     int score = 0;
+    int round = 0;
 }
