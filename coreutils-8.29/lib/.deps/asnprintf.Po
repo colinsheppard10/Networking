@@ -1,0 +1,15 @@
+lib/asnprintf.o: lib/asnprintf.c /usr/include/stdc-predef.h lib/config.h \
+ lib/vasnprintf.h /usr/lib/gcc/x86_64-amazon-linux/4.8.5/include/stdarg.h \
+ lib/stddef.h /usr/lib/gcc/x86_64-amazon-linux/4.8.5/include/stddef.h
+
+/usr/include/stdc-predef.h:
+
+lib/config.h:
+
+lib/vasnprintf.h:
+
+/usr/lib/gcc/x86_64-amazon-linux/4.8.5/include/stdarg.h:
+
+lib/stddef.h:
+
+/usr/lib/gcc/x86_64-amazon-linux/4.8.5/include/stddef.h:

@@ -1,0 +1,15 @@
+lib/strnumcmp.o: lib/strnumcmp.c /usr/include/stdc-predef.h lib/config.h \
+ lib/strnumcmp-in.h lib/strnumcmp.h lib/stddef.h \
+ /usr/lib/gcc/x86_64-amazon-linux/4.8.5/include/stddef.h
+
+/usr/include/stdc-predef.h:
+
+lib/config.h:
+
+lib/strnumcmp-in.h:
+
+lib/strnumcmp.h:
+
+lib/stddef.h:
+
+/usr/lib/gcc/x86_64-amazon-linux/4.8.5/include/stddef.h:

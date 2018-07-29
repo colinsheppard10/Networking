@@ -1,0 +1,18 @@
+lib/stripslash.o: lib/stripslash.c /usr/include/stdc-predef.h \
+ lib/config.h lib/dirname.h \
+ /usr/lib/gcc/x86_64-amazon-linux/4.8.5/include/stdbool.h lib/stddef.h \
+ /usr/lib/gcc/x86_64-amazon-linux/4.8.5/include/stddef.h lib/dosname.h
+
+/usr/include/stdc-predef.h:
+
+lib/config.h:
+
+lib/dirname.h:
+
+/usr/lib/gcc/x86_64-amazon-linux/4.8.5/include/stdbool.h:
+
+lib/stddef.h:
+
+/usr/lib/gcc/x86_64-amazon-linux/4.8.5/include/stddef.h:
+
+lib/dosname.h:

@@ -1,0 +1,43 @@
+lib/localtime-buffer.o: lib/localtime-buffer.c /usr/include/stdc-predef.h \
+ lib/config.h lib/localtime-buffer.h lib/time.h /usr/include/time.h \
+ /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h lib/stddef.h \
+ /usr/lib/gcc/x86_64-amazon-linux/4.8.5/include/stddef.h \
+ /usr/include/bits/time.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/bits/timex.h \
+ /usr/include/xlocale.h
+
+/usr/include/stdc-predef.h:
+
+lib/config.h:
+
+lib/localtime-buffer.h:
+
+lib/time.h:
+
+/usr/include/time.h:
+
+/usr/include/features.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/gnu/stubs.h:
+
+/usr/include/gnu/stubs-64.h:
+
+lib/stddef.h:
+
+/usr/lib/gcc/x86_64-amazon-linux/4.8.5/include/stddef.h:
+
+/usr/include/bits/time.h:
+
+/usr/include/bits/types.h:
+
+/usr/include/bits/typesizes.h:
+
+/usr/include/bits/timex.h:
+
+/usr/include/xlocale.h:
