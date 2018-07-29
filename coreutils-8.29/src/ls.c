@@ -1443,6 +1443,7 @@ signal_restore (void)
 int
 main (int argc, char **argv)
 {
+  printf("Hello from Colin \n");
   int i;
   struct pending *thispend;
   int n_files;
